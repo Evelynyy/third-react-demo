@@ -1,28 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Clock from './components/clock/Clock';
+import Toggle from './components/toggle/Toggle';
+import Popper from './components/popper/Popper';
+import Greeting from './components/greeting/Greeting';
+import LoginControl from './components/greeting/LoginControl';
+import Mailbox from './components/mailbox/Mailbox';
 
 class App extends Component {
   render() {
+    const messages = ['React', 'Re: React', 'Re:Re: React'];
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Clock date={ new Date() }/>
+        <hr/>
+
+        <Toggle/>
+        <hr/>
+
+        <Popper/>
+        <hr/>
+
+        <Greeting isLoggedIn={false}/>
+        <hr/>
+
+        <LoginControl/>
+        <hr/>
+
+        <Mailbox unreadMessages={messages}/>
+        <hr/>
+
       </div>
     );
   }
 }
+
 
 export default App;
