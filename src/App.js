@@ -8,12 +8,26 @@ import LoginControl from './components/greeting/LoginControl';
 import Mailbox from './components/mailbox/Mailbox';
 import Page from './components/page/Page';
 import NumberList from './components/list/NumberList';
+import BlogList from './components/list/BlogList';
 
 class App extends Component {
   render() {
     const messages = ['React', 'Re: React', 'Re:Re: React'];
 
     const numbers = [1, 2, 3, 4, 5];
+
+    const posts = [
+      {
+        id: 1,
+        title: 'Hello React',
+        content: 'Welcome to learning React!'
+      },
+      {
+        id: 2,
+        title: 'Installation',
+        content: 'You can install React from npm.'
+      }
+    ]
 
     return (
       <div className="App">
@@ -40,6 +54,8 @@ class App extends Component {
 
         <NumberList numbers={numbers}/>
         <hr/>
+
+        <BlogList posts={posts}/>
 
       </div>
     );
