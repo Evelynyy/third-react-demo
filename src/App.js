@@ -9,6 +9,10 @@ import Mailbox from './components/mailbox/Mailbox';
 import Page from './components/page/Page';
 import NumberList from './components/list/NumberList';
 import BlogList from './components/list/BlogList';
+import NameForm from './components/form/NameForm';
+import EssayForm from './components/form/EssayForm';
+import FlavorForm from './components/form/FlavorForm';
+import Reservation from './components/form/Reservation';
 
 class App extends Component {
   render() {
@@ -56,7 +60,22 @@ class App extends Component {
         <hr/>
 
         <BlogList posts={posts}/>
+        <hr/>
 
+        <NameForm />
+        <hr/>
+        
+        <EssayForm/>
+        <hr/>
+
+        <FlavorForm/>
+        <hr />
+
+        <Reservation />
+
+
+
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       </div>
     );
   }
