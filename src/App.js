@@ -13,6 +13,7 @@ import NameForm from './components/form/NameForm';
 import EssayForm from './components/form/EssayForm';
 import FlavorForm from './components/form/FlavorForm';
 import Reservation from './components/form/Reservation';
+import Calculator from './components/state-promotion/Calculator';
 
 class App extends Component {
   render() {
@@ -72,6 +73,10 @@ class App extends Component {
         <hr />
 
         <Reservation />
+        <hr />
+
+        <Calculator />
+        <hr />
 
 
 
