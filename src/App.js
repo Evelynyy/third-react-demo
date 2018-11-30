@@ -14,6 +14,11 @@ import EssayForm from './components/form/EssayForm';
 import FlavorForm from './components/form/FlavorForm';
 import Reservation from './components/form/Reservation';
 import Calculator from './components/state-promotion/Calculator';
+import WelcomeDialog from './components/assemble/WelcomeDialog';
+import SplitPane from './components/splitpane/SplitPane';
+import Contacts from './components/splitpane/Contacts';
+import Chat from './components/splitpane/Chat';
+import SignUpDialog from './components/dialog/SignUpDialog';
 
 class App extends Component {
   render() {
@@ -76,6 +81,21 @@ class App extends Component {
         <hr />
 
         <Calculator />
+        <hr />
+
+        <WelcomeDialog/>
+        <hr />
+
+        <SplitPane 
+          left={
+            <Contacts />
+          }
+          right={
+            <Chat />
+          } />
+        <hr />
+
+        <SignUpDialog />
         <hr />
 
 
