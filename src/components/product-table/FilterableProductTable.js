@@ -16,13 +16,13 @@ class FilterableProductTable extends Component {
 
     handleFilterTextInput(filterText) {
         this.setState({
-            filterText: filterText
+            filterText
         });
     }
 
     handleInStockInput(inStockOnly) {
         this.setState({
-            inStockOnly: inStockOnly
+            inStockOnly
         });
     }
 
