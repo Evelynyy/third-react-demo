@@ -14,11 +14,12 @@ import EssayForm from './components/form/EssayForm';
 import FlavorForm from './components/form/FlavorForm';
 import Reservation from './components/form/Reservation';
 import Calculator from './components/state-promotion/Calculator';
-import WelcomeDialog from './components/assemble/WelcomeDialog';
+import WelcomeDialog from './components/dialog/WelcomeDialog';
 import SplitPane from './components/splitpane/SplitPane';
 import Contacts from './components/splitpane/Contacts';
 import Chat from './components/splitpane/Chat';
 import SignUpDialog from './components/dialog/SignUpDialog';
+import FilterableProductTable from './components/product-table/FilterableProductTable';
 
 class App extends Component {
   render() {
@@ -38,6 +39,15 @@ class App extends Component {
         content: 'You can install React from npm.'
       }
     ]
+
+    var PRODUCTS = [
+      {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
+      {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
+      {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
+      {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
+      {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
+      {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
+    ];
 
     return (
       <div className="App">
@@ -97,6 +107,8 @@ class App extends Component {
 
         <SignUpDialog />
         <hr />
+
+        <FilterableProductTable products={PRODUCTS} />
 
 
 
